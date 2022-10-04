@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Cookhome</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Productos</string>
+    <string name="title_dashboard">Ventas</string>
+    <string name="title_notifications">Carrito</string>
     <string name="title_activity_login">Cookhome</string>
     <string name="prompt_email">Usuario</string>
     <string name="prompt_password">Contraseña</string>
