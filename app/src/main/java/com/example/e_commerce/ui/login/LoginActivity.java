@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.e_commerce.MainActivity;
 import com.example.e_commerce.R;
+import com.example.e_commerce.RegisterActivity;
 import com.example.e_commerce.ui.login.LoginViewModel;
 import com.example.e_commerce.ui.login.LoginViewModelFactory;
 import com.example.e_commerce.databinding.ActivityLoginBinding;
@@ -34,7 +36,7 @@ private ActivityLoginBinding binding;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-     binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
      setContentView(binding.getRoot());
 
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
@@ -120,6 +122,15 @@ private ActivityLoginBinding binding;
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
                 Intent intent = new Intent (v.getContext(), MainActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button btnRegister = (Button) findViewById(R.id.register);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), RegisterActivity.class);
                 startActivityForResult(intent, 0);
             }
         });

@@ -4,8 +4,12 @@
     <string name="title_dashboard">Ventas</string>
     <string name="title_notifications">Carrito</string>
     <string name="title_activity_login">Cookhome</string>
-    <string name="prompt_email">Usuario</string>
+    <string name="prompt_email_user">Usuario</string>
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="prompt_user">Nombre de usuario</string>
+    <string name="prompt_phone">Número de teléfono</string>
     <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_on">Crear cuenta</string>
     <string name="action_sign_in">Iniciar sesión</string>
     <string name="action_sign_in_short">Iniciando sesión...</string>
     <string name="welcome">"¡Hola! "</string>
