@@ -126,8 +126,8 @@ private ActivityLoginBinding binding;
             }
         });
 
-        Button btnRegister = (Button) findViewById(R.id.register);
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        Button btnRegisterView = (Button) findViewById(R.id.register);
+        btnRegisterView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (v.getContext(), RegisterActivity.class);
