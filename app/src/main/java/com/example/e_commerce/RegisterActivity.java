@@ -1,5 +1,6 @@
 package com.example.e_commerce;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -66,6 +67,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    public void completedRegister() {
+        Intent i = new Intent(this, CompletedRegisterActivity.class );
+        startActivity(i);
+    }
+
     private void createUser( final String username, final String correo, final String telefono, final String contrasena) {
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
@@ -74,8 +80,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(RegisterActivity.this, "Registro correcto", Toast.LENGTH_SHORT).show();
-
-
+                        completedRegister();
                     }
                 },
                 new Response.ErrorListener() {
